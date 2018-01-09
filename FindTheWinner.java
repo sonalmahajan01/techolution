@@ -26,22 +26,27 @@ public class FindTheWinner{
      
     static String winner(int[] andrea, int[] maria, String s) {
       
-      String winner = "";
+        String winner = "";
       
-      int scroreAndrea = 0;
-      int scoreMaria = 0;
-      int index = 0;
+        int scroreAndrea = 0;
+        int scoreMaria = 0;
+        int index = 0;
       
-      if(s.equals("odd")) {
-        index = 1;
-      }
+        if(s.equals("odd")) {
+            index = 1;
+        }
 
-      while (index < andrea.length && index < maria.length) {
-        scroreAndrea = andrea[index] - maria[index];
-        scoreMaria = maria[index] - andrea[index];
-      	index+=2;
-      }
-	  winner = scroreAndrea > scoreMaria? "Andrea":"Maria";
-      return winner;
+        while (index < andrea.length && index < maria.length) {
+            scroreAndrea = andrea[index] - maria[index];
+            scoreMaria = maria[index] - andrea[index];
+      	    index+=2;
+        }
+        if(scroreAndrea == scoreMaria) {
+            winner = "Tie";
+        } else {
+	        winner = scroreAndrea > scoreMaria? "Andrea":"Maria";
+        }
+        
+        return winner;
     }
 }
