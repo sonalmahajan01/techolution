@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Solution{
 
@@ -7,12 +6,10 @@ public class Solution{
         Scanner in = new Scanner(System.in);
         
         int noOfExpr = in.nextInt();
-        System.out.println(noOfExpr);
         String[] expr = new String[noOfExpr];
         for(int i =0; i<noOfExpr; i++) {
             expr[i] = in.next();
         }
-        System.out.println(Arrays.toString(expr));
         int maxReplacements = in.nextInt();
         int[] arrMaxReplacements = new int[maxReplacements];
         for(int i =0; i<maxReplacements; i++) {
@@ -20,7 +17,10 @@ public class Solution{
         } 
         
         int[] result = balancedOrNot(expr, arrMaxReplacements);
-        System.out.println(Arrays.toString(result));
+        for(int i =0; i<result.length; i++) {
+            System.out.println(result[i]);    
+        }
+        
      }
 
   	static int[] balancedOrNot(String[] expressions, int[] maxReplacements) {
