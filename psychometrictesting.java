@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Solution{
 
@@ -25,7 +24,9 @@ public class Solution{
         }   
         
         int[] result = jobOffers(arrscore, arrLowerLimit, arrUpperLimit);
-        System.out.println(Arrays.toString(result));
+        for(int i =0; i<result.length; i++) {
+            System.out.println(result[i]);
+        }
 
  
     }
