@@ -35,7 +35,7 @@ public class Solution{
       if(s.equals("odd")) {
         index = 1;
       }
-      System.out.println(index);
+
       while (index < andrea.length && index < maria.length) {
         scroreAndrea = andrea[index] - maria[index];
         scoreMaria = maria[index] - andrea[index];
