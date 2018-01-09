@@ -9,11 +9,6 @@ public class Solution{
         int kelly = in.nextInt();
         int ashaAhead = in.nextInt();
         
-        if(asha < 1 || asha > 100 || kelly < 1 || kelly > 100 || ashaAhead <0 || ashaAhead > 100) {
-            System.out.println("Invalid Inputs");
-            System.exit(0);
-        }
-        
         int minNum = minNum(asha, kelly, ashaAhead);
         System.out.println(minNum);
 
@@ -30,7 +25,9 @@ public class Solution{
     	    kelly += K;
     	    minNum++;
     	}
-      
-        return minNum;
+        if(kelly <= asha)
+            return -1;
+        else 
+            return minNum;
     }
 }
