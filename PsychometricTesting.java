@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Solution{
+public class PsychometricTesting{
 
      public static void main(String []args){
         Scanner in = new Scanner(System.in);
