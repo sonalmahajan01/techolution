@@ -24,7 +24,6 @@ public class TwoCircles{
         String[] result = new String[info.length]; 
         for(int i =0; i < info.length; i++) {
             
-            //System.out.println(info[i]);
             String[] arrInfo = info[i].split(" ");
             
             int r1 =  Integer.parseInt(arrInfo[2]);
@@ -43,15 +42,14 @@ public class TwoCircles{
             int min2 = c2 - r2;
             int max2 = c2 + r2;
             
-            //Touching
-            if(min1 == min2 || min1 == max2 || max1 == max2 || max1 == min2) {
-                result[i] = "Touching"; 
-            }
-            else if(c1 == c2) {
+            if(c1 == c2) {
                 result[i] = "Concentric"; 
             }
-            else if((max1 > min2 && max1 < max2) || (max2 > min1 && max2 < max1)) {
+            else if((max1 > min2 && max1 < max2 && min2 > min1 && min2 < max1) || (max2 > min1 && max2 < max1 && min1 > min2 && min1 < max2)) {
                 result[i] = "Intersecting"; 
+            }
+            else if(min1 == min2 || min1 == max2 || max1 == max2 || max1 == min2) {
+                result[i] = "Touching"; 
             }
             else if ((min2 > min1 && max2 < max1) || (min1 > min2 && max1 < max2)) {
                 result[i] = "Disjoint‐Inside"; 
