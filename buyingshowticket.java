@@ -19,7 +19,7 @@ public class Solution{
     
     static long waitingTime(int[] tickets, int p) {
 
-        int count=0;
+        long count=0;
         
         for(int i =0; i< tickets.length; i++) {
             
