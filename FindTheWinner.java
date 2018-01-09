@@ -37,8 +37,8 @@ public class FindTheWinner{
         }
 
         while (index < andrea.length && index < maria.length) {
-            scroreAndrea = andrea[index] - maria[index];
-            scoreMaria = maria[index] - andrea[index];
+            scroreAndrea += andrea[index] - maria[index];
+            scoreMaria += maria[index] - andrea[index];
       	    index+=2;
         }
         if(scroreAndrea == scoreMaria) {
